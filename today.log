@@ -1,0 +1,315 @@
+var w = 100;
+undefined
+typeof w;
+"number"
+w = 100.20;
+100.2
+typeof w;
+"number"
+w = "Hello";
+"Hello"
+typeof w;
+"string"
+w='Hello';
+"Hello"
+typeof w;
+"string"
+w= true;
+true
+typeof w;
+"boolean"
+w= {id:1001,name:'Ram'};
+Object {id: 1001, name: "Ram"}
+typeof w;
+"object"
+w instanceof Object;
+true
+typeof Object;
+"function"
+w = [10,20];
+(2) [10, 20]
+typeof w;
+"object"
+w instanceof Array;
+true
+typeof Array;
+"function"
+w instanceof Object;
+true
+var e;
+undefined
+typeof e;
+"undefined"
+function display(){
+console.log("this is display");
+}
+undefined
+display(10,20);
+VM295:2 this is display
+undefined
+display(10,20,"amit");
+VM295:2 this is display
+undefined
+display();
+VM295:2 this is display
+undefined
+var t = display;
+undefined
+typeof t;
+"function"
+t();
+VM295:2 this is display
+undefined
+function evenOdd(x){
+console.log(x%2==0?"Even No"+x:"Odd No "+x);
+}
+undefined
+function cube(x){
+console.log(x*x*x);
+}
+undefined
+function fiveTable(i){
+console.log(5*i);
+}
+undefined
+function myLoop(fn){
+for(var i =1; i<=10; i++){
+fn(i);
+}
+}
+undefined
+myLoop(evenOdd);
+VM427:2 Odd No 1
+VM427:2 Even No2
+VM427:2 Odd No 3
+VM427:2 Even No4
+VM427:2 Odd No 5
+VM427:2 Even No6
+VM427:2 Odd No 7
+VM427:2 Even No8
+VM427:2 Odd No 9
+VM427:2 Even No10
+undefined
+myLoop(cube);
+VM487:2 1
+VM487:2 8
+VM487:2 27
+VM487:2 64
+VM487:2 125
+VM487:2 216
+VM487:2 343
+VM487:2 512
+VM487:2 729
+VM487:2 1000
+undefined
+myLoop(fiveTable);
+VM535:2 5
+VM535:2 10
+VM535:2 15
+VM535:2 20
+VM535:2 25
+VM535:2 30
+VM535:2 35
+VM535:2 40
+VM535:2 45
+VM535:2 50
+undefined
+function myLoop(fn){
+for(let i =1; i<=10; i++){
+fn(i);
+}
+}
+undefined
+function test(){
+if(10>2){
+var r = 1000;
+}
+console.log("R is "+r);
+}
+undefined
+test();
+VM740:5 R is 1000
+undefined
+function test(){
+if(10>2){
+let r = 1000;
+}
+console.log("R is "+r);
+}
+undefined
+test();
+VM757:5 Uncaught ReferenceError: r is not defined
+    at test (<anonymous>:5:21)
+    at <anonymous>:1:1
+test @ VM757:5
+(anonymous) @ VM771:1
+function myLoop(fn){
+for(var i =1; i<=10; i++){
+fn(i);
+}
+}
+undefined
+var e = function(){
+console.log("E Function ");
+}
+undefined
+function print(){
+	var w = function(){
+	console.log('this is w ');    
+}
+}
+undefined
+typeof e;
+"function"
+e();
+VM882:2 E Function 
+undefined
+myLoop(function(i){console.log(i*i)});
+VM1027:1 1
+VM1027:1 4
+VM1027:1 9
+VM1027:1 16
+VM1027:1 25
+VM1027:1 36
+VM1027:1 49
+VM1027:1 64
+VM1027:1 81
+VM1027:1 100
+undefined
+function add(x,y){
+return x + y;
+}
+undefined
+add(100,200);
+300
+var add2 = (x,y)=>x+y;
+undefined
+typeof add2;
+"function"
+add2(100,200);
+300
+var add2 = (x,y)=>
+{
+console.log("x is "+x+" and y is "+y);
+return x+y;
+}
+undefined
+add2(1000,2000);
+VM1163:3 x is 1000 and y is 2000
+3000
+100 + 200;
+300
+100 + "200";
+"100200"
+100 - "200";
+-100
+100 - "ram";
+NaN
+undefined + undefined;
+NaN
+add2();
+VM1163:3 x is undefined and y is undefined
+NaN
+var add2 = (x,y)=>
+{
+console.log(`X is ${x} and Y is ${y}`);
+return x+y;
+}
+undefined
+add2(1000,2000);
+VM1221:3 X is 1000 and Y is 2000
+3000
+var [a,b] =[100,200];
+undefined
+a;
+100
+b;
+200
+[a,b] = [b,a];
+(2) [200, 100]
+a;
+200
+b;
+100
+a="100";
+"100"
+b=100;
+100
+a==b;
+true
+a===b;
+false
+a+b;
+"100100"
+parseInt(a)+ b;
+200
+Number(a) + b;
+200
+a-b;
+0
+var tt ;
+undefined
+typeof tt;
+"undefined"
+var ff = {};
+undefined
+ff=null;
+null
+typeof ff;
+"object"
+typeof tt;
+"undefined"
+var w= window.open("http://www.google.com");
+undefined
+w.close();
+undefined
+typeof window;
+"object"
+window.document.write("Hello JS ");
+undefined
+document.createElement("h1");
+<h1>​</h1>​
+display;
+function display(){
+console.log("this is display");
+}
+var t = setInterval(display,1000);
+undefined
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+VM295:2 this is display
+clearInterval(t);
+undefined
+setTimeout(display,2000);
+2
+VM295:2 this is display
