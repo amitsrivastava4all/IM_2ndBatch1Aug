@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc App</title>
+	<link rel="stylesheet" href="css/design.css">
+	<script src="js/model.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><label for="">FirstNo</label></td>
+			<td><input type="text" id="firstNo" placeholder="Type First Number"></td>
+		</tr>
+		<tr>
+			<td><label for="">SecondNo</label></td>
+			<td><input type="text" id="secondNo" placeholder="Type Second Number"></td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table>
+					<tr>
+						<td><button data-operator="+" data-operation="add" class="opr">+</button></td>
+						<td><button data-operator="-" data-operation="subtract" class="opr">-</button></td>
+						<td><button data-operator="*" data-operation="multiply" class="opr">*</button></td>
+						<td><button data-operator="/" data-operation="divide" class="opr">/</button></td>
+						<td><button>Clear</button></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<h1>Result is <span id="result"></span> </h1>
+</body>
+</html>

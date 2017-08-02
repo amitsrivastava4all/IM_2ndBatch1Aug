@@ -1,0 +1,239 @@
+function Customer(){
+console.log("this is Customer Function ");
+}
+undefined
+typeof Customer;
+"function"
+var ram = new Customer();
+VM90:2 this is Customer Function 
+undefined
+Customer();
+VM90:2 this is Customer Function 
+undefined
+typeof ram;
+"object"
+ram instanceof Customer;
+true
+console.dir(Customer);
+VM253:1 function Customer()arguments: nullcaller: nulllength: 0name: "Customer"prototype: Objectconstructor: function Customer()__proto__: Object__proto__: function ()[[FunctionLocation]]: VM90:1[[Scopes]]: Scopes[1]
+undefined
+Customer.prototype;
+Object {constructor: function}constructor: function Customer()__proto__: Object
+console.dir(Customer);
+VM331:1 function Customer()arguments: nullcaller: nulllength: 0name: "Customer"prototype: Object__proto__: function ()apply: function apply()arguments: (...)bind: function bind()call: function call()caller: (...)constructor: function Function()length: 0name: ""toString: function toString()Symbol(Symbol.hasInstance): function [Symbol.hasInstance]()get arguments: function ThrowTypeError()set arguments: function ThrowTypeError()get caller: function ThrowTypeError()set caller: function ThrowTypeError()__proto__: Object[[FunctionLocation]]: <unknown>[[FunctionLocation]]: VM90:1[[Scopes]]: Scopes[1]
+undefined
+function Customer(id , name , balance){
+this.id = id;
+this.name = name;
+this.balance = balance;
+
+}
+undefined
+var ram = new Customer(1001,'ram',9000);
+undefined
+typeof ram;
+"object"
+ram instanceof Customer;
+true
+ram;
+Customer {id: 1001, name: "ram", balance: 9000}balance: 9000id: 1001name: "ram"__proto__: Objectconstructor: function Customer(id , name , balance)__proto__: Objectconstructor: function Object()hasOwnProperty: function hasOwnProperty()isPrototypeOf: function isPrototypeOf()propertyIsEnumerable: function propertyIsEnumerable()toLocaleString: function toLocaleString()toString: function toString()valueOf: function valueOf()__defineGetter__: function __defineGetter__()__defineSetter__: function __defineSetter__()__lookupGetter__: function __lookupGetter__()__lookupSetter__: function __lookupSetter__()get __proto__: function __proto__()set __proto__: function __proto__()
+ram.id;
+1001
+Customer.prototype;
+Object {constructor: function}constructor: function Customer(id , name , balance)__proto__: Object
+var shyam = new Customer(1002,"Shyam",8888);
+undefined
+ram;
+Customer {id: 1001, name: "ram", balance: 9000}
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 8888}
+Customer.prototype.print=function(){
+console.log(`Id is ${id} and Name is ${name} and Balance is ${balance}`);
+}
+function (){
+console.log(`Id is ${id} and Name is ${name} and Balance is ${balance}`);
+}
+ram.print();
+VM760:2 Uncaught ReferenceError: id is not defined
+    at Customer.print (<anonymous>:2:22)
+    at <anonymous>:1:5
+Customer.print @ VM760:2
+(anonymous) @ VM776:1
+Customer.prototype.print=function(){
+console.log(`Id is ${this.id} and Name is ${this.name} and Balance is ${this.balance}`);
+}
+function (){
+console.log(`Id is ${this.id} and Name is ${this.name} and Balance is ${this.balance}`);
+}
+ram.print();
+VM807:2 Id is 1001 and Name is ram and Balance is 9000
+undefined
+shyam.print();
+VM807:2 Id is 1002 and Name is Shyam and Balance is 8888
+undefined
+function Customer(id , name , balance){
+this.id = id;
+this.name = name;
+this.balance = balance;
+this.show=function(){
+console.log("Id is "+this.id+" Name is "+this.name+" and Balance is "+this.balance);
+}
+
+}
+undefined
+ram.show();
+VM1011:1 Uncaught TypeError: ram.show is not a function
+    at <anonymous>:1:5
+(anonymous) @ VM1011:1
+var ram = new Customer(1001,"ram",9999);
+undefined
+ram.show();
+VM991:6 Id is 1001 Name is ram and Balance is 9999
+undefined
+var shyam = new Customer(1002,"Shyam",8888);
+undefined
+shyam.show();
+VM991:6 Id is 1002 Name is Shyam and Balance is 8888
+undefined
+shyam.print();
+VM1165:1 Uncaught TypeError: shyam.print is not a function
+    at <anonymous>:1:7
+(anonymous) @ VM1165:1
+Customer.prototype.print=function(){
+console.log(`Id is ${this.id} and Name is ${this.name} and Balance is ${this.balance}`);
+}
+function (){
+console.log(`Id is ${this.id} and Name is ${this.name} and Balance is ${this.balance}`);
+}
+ram.print();
+VM1167:2 Id is 1001 and Name is ram and Balance is 9999
+undefined
+shyam.print();
+VM1167:2 Id is 1002 and Name is Shyam and Balance is 8888
+undefined
+ram.show();
+VM991:6 Id is 1001 Name is ram and Balance is 9999
+undefined
+shyam.show();
+VM991:6 Id is 1002 Name is Shyam and Balance is 8888
+undefined
+ram;
+Customer {id: 1001, name: "ram", balance: 9999, show: function}balance: 9999id: 1001name: "ram"show: function ()__proto__: Objectprint: function ()constructor: function Customer(id , name , balance)__proto__: Object
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 8888, show: function}
+ram.bonus=999;
+999
+ram;
+Customer {id: 1001, name: "ram", balance: 9999, bonus: 999, show: function}
+shyam;
+Customer {id: 1002, name: "Shyam", balance: 8888, show: function}
+delete ram.id;
+true
+ram;
+Customer {name: "ram", balance: 9999, bonus: 999, show: function}
+ram.name;
+"ram"
+var x= "name";
+undefined
+ram[x];
+"ram"
+x="balance";
+"balance"
+ram[x];
+9999
+Customer.prototype.pf = 1111;
+1111
+ram.pf;
+1111
+shyam.pf;
+1111
+"100"-"100";
+0
+String.prototype.initCap=function(){
+console.log("Init Cap ",this);
+}
+function (){
+console.log("Init Cap ",this);
+}
+var d= "sd";
+undefined
+d.initCap();
+VM1497:2 Init Cap  String {0: "s", 1: "d", length: 2, [[PrimitiveValue]]: "sd"}0: "s"1: "d"length: 2__proto__: StringinitCap: function ()anchor: function anchor()big: function big()blink: function blink()bold: function bold()charAt: function charAt()charCodeAt: function charCodeAt()codePointAt: function codePointAt()concat: function concat()constructor: function String()endsWith: function endsWith()fixed: function fixed()fontcolor: function fontcolor()fontsize: function fontsize()includes: function includes()indexOf: function indexOf()italics: function italics()lastIndexOf: function lastIndexOf()length: 0link: function link()localeCompare: function localeCompare()match: function match()normalize: function normalize()padEnd: function padEnd()padStart: function padStart()repeat: function repeat()replace: function replace()search: function search()slice: function slice()small: function small()split: function split()startsWith: function startsWith()strike: function strike()sub: function sub()substr: function substr()substring: function substring()sup: function sup()toLocaleLowerCase: function toLocaleLowerCase()toLocaleUpperCase: function toLocaleUpperCase()toLowerCase: function toLowerCase()toString: function toString()toUpperCase: function toUpperCase()trim: function trim()trimLeft: function trimLeft()trimRight: function trimRight()valueOf: function valueOf()Symbol(Symbol.iterator): function [Symbol.iterator]()__proto__: Object[[PrimitiveValue]]: ""[[PrimitiveValue]]: "sd"
+undefined
+String.prototype.initCap=function(){
+console.log("Init Cap ",this.value);
+}
+function (){
+console.log("Init Cap ",this.value);
+}
+d.initCap();
+VM1554:2 Init Cap  undefined
+undefined
+String.prototype.initCap=function(){
+console.log("Init Cap ",this.toString());
+}
+function (){
+console.log("Init Cap ",this.toString());
+}
+d.initCap();
+VM1601:2 Init Cap  sd
+undefined
+if(window.navigator.geolocation){
+console.log("truthy");
+}
+else{
+console.log("falsy ");
+}
+VM1714:2 truthy
+undefined
+x = "";
+""
+if(x){
+console.log("Truthy ");
+}
+else{
+console.log("falsy ");
+}
+VM1783:5 falsy 
+undefined
+x=0
+0
+if(x){
+console.log("Truthy ");
+}
+else{
+console.log("falsy ");
+}
+VM1788:5 falsy 
+undefined
+x=null;
+null
+if(x){
+console.log("Truthy ");
+}
+else{
+console.log("falsy ");
+}
+VM1801:5 falsy 
+undefined
+x=undefined;
+undefined
+if(x){
+console.log("Truthy ");
+}
+else{
+console.log("falsy ");
+}
+VM1822:5 falsy 
+undefined
+function whoAmI(){
+console.log("Name is ",this.name);
+}
+undefined
+var myObject = {name:'Ram'};
+undefined
+var r = whoAmI.bind(myObject);
+undefined
+r();
+VM1889:2 Name is  Ram
+undefined
