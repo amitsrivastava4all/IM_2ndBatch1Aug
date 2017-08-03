@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ITEM - CRUD</title>
+	<link rel="stylesheet" href="css/design.css">
+	<script src="js/item.js"></script>
+	<script src="js/itemoperations.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body>
+	<fieldset>
+		<legend>ITEM-DETAIL</legend>
+		<table >
+			<tr>
+				<td><label for="">ItemNo</label></td>
+				<td><label id="itemid"></label></td>
+			</tr>
+			<tr>
+				<td><label for="">Name</label></td>
+				<td><input class="clearFields" type="text" id="name" placeholder="Type Item Name"></td>
+			</tr>
+			<tr>
+				<td><label for="">Descr</label></td>
+				<td><textarea class="clearFields" id="descr" cols="30" rows="5" placeholder="Type Descr Here"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">Price</label></td>
+				<td><input class="clearFields" type="text" id="price" placeholder="Type Price Here"></td>
+			</tr>
+			<tr>
+				<td><label for="">Color</label></td>
+				<td><input  type="color" id="color" ></td>
+			</tr>
+			<tr>
+				<td><label for="">Del Date</label></td>
+				<td><input class="clearFields" type="date" id="deldate" ></td>
+			</tr>
+			<tr>
+				<td><label for="">URL</label></td>
+				<td><input class="clearFields" type="url" id="url" ></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				
+					<table>
+						<tr>
+							<td><button id="add">Add</button></td>
+							<td><button>Delete</button></td>
+							<td><button>Search</button></td>
+							<td><button>Update</button></td>
+							<td><button>Sort</button></td>
+							<td><button>Save</button></td>
+							<td><button>Load</button></td>
+							<td><button>Load From Server</button></td>
+							<td><button>Clear All</button></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+		</table>
+	</fieldset>
+	<p>Total Records are :: <span id="total"></span></p>
+	<fieldset>
+		<legend>Item List</legend>
+		<table border="1">
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Name</td>
+					<td>Descr</td>
+					<td>Price</td>
+					<td>DelDate</td>
+					<td>Color</td>
+					<td>URL</td>
+					<td>Operations</td>
+				</tr>
+			</thead>
+			<tbody id="items">
+				
+			</tbody>
+		</table>
+	</fieldset>
+</body>
+</html>
