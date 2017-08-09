@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Online-OffLine Test - Powered by .COM</title>
+
+</head>
+
+<body>
+<section>
+<article>
+  <p>Current network status: <span id="status">checking...</span></p>
+  <ol id="state"></ol>
+</article>
+</section>
+<script type="text/javascript">
+
+
+	  var state = document.getElementById("state"); 
+	  var statusElem=document.getElementById("status");
+	  alert("Here");
+	  
+	  statusElem.innerHTML = navigator.onLine ? 'online' : 'offline';
+	  //state.innerHTML += '<li>New event: ' + event.type + '</li>';
+	
+
+
+</script>
+</body>
+</html>
